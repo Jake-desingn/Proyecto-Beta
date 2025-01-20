@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Fogón gourmet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Menú.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16">
+
+</head>
+<body>
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+                <div class="logo">
+                    <img src="img/el fogón.png"width="125"
+                    px" height="auto">
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" onclick="seleccionar()">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                         
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html" onclick="seleccionar()">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Platos</span>
+                            </a></li>
+                        <li>
+                            <a href="#blog" onclick="seleccionar()">
+                                <i class="fa-solid fa-pen"></i>
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="tel:+1 809 588 0302">
+                        <i class="fa-solid fa-phone"></i>+1 809 588 0302
+                    </a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                </div>
+                <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+			<div class="content-banner">
+				<p>Ofertas de invierno</p>
+				<h2>Hamburguesa Suprema<br />Oferta 2x1</h2>
+				<a href="#">Comprar ahora</a>
+			</div>
+		</section>
+        <main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito a nivel mundial</span>
+						<p>En pedido superior a $150</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>100% garantía de devolución de dinero</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p>Ofrece bonos especiales con regalo</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos 24/7 al 123-456-7890</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-moca">
+						<p>Comida rapida</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-expreso">
+						<p>Comida gourmet</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<p>Postres</p>
+						<span>Ver más</span>
+					</div>
+				</div>
+			</section>
+            <section class="container top-products">
+				<h1 class="heading-1">Mejores Productos</h1>
+
+				<div class="container-options">
+					<span class="active">Destacados</span>
+					<span>Más recientes</span>
+					<span>Mejores Vendidos</span>
+				</div>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/HD-wallpaper-pizza-food.jpg" alt="Cafe Irish" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Pizza Italiana</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.60 <span>$5.30</span></p>
+						</div>
+					</div>
+                    <div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png"
+								alt="Cafe incafe-ingles.jpg"
+							/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Hamburguesas</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+                    <div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/manzana.jpg"
+								alt="Cafe Australiano"
+							/>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Pastel de manzana</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.20</p>
+						</div>
+                </section>
+                <section class="container specials">
+                    <h1 class="heading-1">Especiales</h1>
+    
+                    <div class="container-products">
+                        <!-- Producto 1 -->
+                        <div class="card-product">
+                            <div class="container-img">
+                                <img src="img/pastas.webp" alt="Cafe Irish" />
+                                <span class="discount">-13%</span>
+                                <div class="button-group">
+                                    <span>
+                                        <i class="fa-regular fa-eye"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-card-product">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h3>Pastas</h3>
+                                <span class="add-cart">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </span>
+                                <p class="price">$4.60 <span>$8.30</span></p>
+                            </div>
+                        </div>
+                        <!-- Producto 2 -->
+                        <div class="card-product">
+                            <div class="container-img">
+                                <img
+                                    src="img/helados.jpg"
+                                    alt="Cafe incafe-ingles.jpg"
+                                />
+                                <span class="discount">-22%</span>
+                                <div class="button-group">
+                                    <span>
+                                        <i class="fa-regular fa-eye"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-card-product">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h3>Helados</h3>
+                                <span class="add-cart">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </span>
+                                <p class="price">$2.50 <span>$3.30</span></p>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="card-product">
+                            <div class="container-img">
+                                <img src="img/galletas de chocolate.jpg" alt="Cafe Viena" />
+                                <span class="discount">-30%</span>
+                                <div class="button-group">
+                                    <span>
+                                        <i class="fa-regular fa-eye"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-card-product">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3>Galletas</h3>
+                                <span class="add-cart">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </span>
+                                <p class="price">$3.85 <span>$5.50</span></p>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="card-product">
+                            <div class="container-img">
+                                <img src="img/carnes cortes.webp" alt="Cafe Liqueurs" />
+                                <div class="button-group">
+                                    <span>
+                                        <i class="fa-regular fa-eye"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-card-product">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h3>Cortes de Carne</h3>
+                                <span class="add-cart">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </span>
+                                <p class="price">$5.60</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container blogs">
+                    <h1 class="heading-1">Últimos Blogs</h1>
+    
+                    <div class="container-blogs">
+                        <div class="card-blog">
+                            <div class="container-img">
+                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 1" />
+                                <div class="button-group-blog">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-link"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-blog">
+                                <h3>Lorem, ipsum dolor sit</h3>
+                                <span>22 Noviembre 2024</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Iste, molestiae! Ratione et, dolore ipsum
+                                    quaerat iure illum reprehenderit non maxime amet dolor
+                                    voluptas facilis corporis, consequatur eius est sunt
+                                    suscipit?
+                                </p>
+                                <div class="btn-read-more">Leer más</div>
+                            </div>
+                        </div>
+                        <div class="card-blog">
+                            <div class="container-img">
+                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 2" />
+                                <div class="button-group-blog">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-link"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-blog">
+                                <h3>Lorem, ipsum dolor sit</h3>
+                                <span>22 Noviembre 2024</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Iste, molestiae! Ratione et, dolore ipsum
+                                    quaerat iure illum reprehenderit non maxime amet dolor
+                                    voluptas facilis corporis, consequatur eius est sunt
+                                    suscipit?
+                                </p>
+                                <div class="btn-read-more">Leer más</div>
+                            </div>
+                        </div>
+                        <div class="card-blog">
+                            <div class="container-img">
+                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 3" />
+                                <div class="button-group-blog">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-link"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="content-blog">
+                                <h3>Lorem, ipsum dolor sit</h3>
+                                <span>22 Noviembre 2024</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Iste, molestiae! Ratione et, dolore ipsum
+                                    quaerat iure illum reprehenderit non maxime amet dolor
+                                    voluptas facilis corporis, consequatur eius est sunt
+                                    suscipit?
+                                </p>
+                                <div class="btn-read-more">Leer más</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="contacto">
+                    <div class="fila">
+                        <div class="col">
+                             <img src="img/el fogón2.jpg"width="125"
+                            px" height="auto">
+                        </div>
+                        <div class="col">
+                            <h3>Menú</h3>
+                            <a href="#inicio">Inicio</a>
+                            <a href="#sabores">Sabores</a>
+                            <a href="#sabores">Platos</a>
+                            <a href="#sabores">Blog</a>
+                        </div>
+                        <div class="col">
+                            <h3>Cheffs</h3>
+                            <a href="#">Marcos G.</a>
+                            <a href="#">María L.</a>
+                            <a href="#">Marta J.</a>
+                        </div>
+                        <div class="col">
+                            <h3>Social Media</h3>
+                            <div class="media">
+                                <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
+                            </div>
+                            <div class="media">
+                                <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3>Contacto</h3>
+                            <form id="contactForm">
+                                <input type="email" placeholder="Tu correo" id="email" required>
+                                <textarea placeholder="Tu reseña" id="mensaje" required></textarea>
+                                <input type="submit" class="enviar" value="Enviar">
+                            </form>
+                            <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            
+            <script type="text/javascript">
+              emailjs.init('GB20SfjXHQ4rpYGP2')
+            </script>
+                        </div>
+                    </div>
+            
+                </section>
+                
+                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                <script src="script.js"></script>
+            </body>
+            </html>
