@@ -57,4 +57,5 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             alert("Error al enviar el mensaje. Por favor, intenta de nuevo.");
         }
     );
+    
 });
