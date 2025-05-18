@@ -1,23 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="Css/style.css">
-  <title>Inicio de Sesión</title>
+  <title>Login y Registro</title>
+ 
 </head>
 <body>
-    <section class="form-register">
-        <center><h4>Iniciar Sesión</h4></center>
-        <form action="index.html" method="post">
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-            <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
-            <input class="botons" type="submit" value="Iniciar Sesión">
-            <p><a href="#">¿No tienes una cuenta? ¡Registate ya!</a></p>
-        </form>
-    </section>
-
+    <div class="container" id="loginContainer">
+        <h2>Iniciar Sesión</h2>
+        <div class="message" id="loginMessage"></div>
+        <div class="form-group">
+          <label for="loginUsername">Usuario</label>
+          <input type="text" id="loginUsername" placeholder="Ingrese su usuario">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <input type="password" id="loginPassword" placeholder="Ingrese su contraseña">
+        </div>
+        <button class="btn" onclick="login()">Iniciar Sesión</button>
+        <div class="switch">
+          ¿No tienes cuenta? <a onclick="switchToRegister()">Regístrate aquí</a>
+        </div>
+      </div>
+    
+      <div class="container hidden" id="registerContainer">
+        <h2>Registro</h2>
+        <div class="message" id="registerMessage"></div>
+        <div class="form-group">
+          <label for="registerUsername">Usuario</label>
+          <input type="text" id="registerUsername" placeholder="Cree un nombre de usuario">
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Contraseña</label>
+          <input type="password" id="registerPassword" placeholder="Cree una contraseña">
+        </div>
+        <button class="btn" onclick="register()">Registrarse</button>
+        <div class="switch">
+          ¿Ya tienes cuenta? <a onclick="switchToLogin()">Inicia sesión aquí</a>
+        </div>
+      </div>
+  <script src="Js/main.js"></script>
 </body>
 </html>

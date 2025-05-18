@@ -58,4 +58,47 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         }
     );
     
-});
+})
+// Función para mostrar la ventana emergente
+function showPopup(type, title, message) {
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupMessage = document.getElementById('popupMessage');
+
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+
+    if (type === 'success') {
+        popup.classList.add('success');
+        popup.classList.remove('error');
+    } else if (type === 'error') {
+        popup.classList.add('error');
+        popup.classList.remove('success');
+    }
+
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+}
+const currentUserKey = "currentUser";
+
+// Verificar si hay una sesión activa al cargar la página
+window.onload = () => {
+    const currentUser = localStorage.getItem(currentUserKey);
+    const loginLink = document.getElementById("login");
+
+    if (currentUser) {
+        // Si hay usuario logueado, cambiar el texto del botón a "Cerrar Sesión"
+        loginLink.textContent = "Cerrar Sesión";
+        alert(`Bienvenido`); // Mensaje de bienvenida
+        loginLink.onclick = logout;
+    } else {
+        // Si no hay usuario, redirigir al login
+        loginLink.href = "Iniciodesesión.html";
+    }
+};
+
+function logout() {
+    localStorage.removeItem(currentUserKey); // Elimina la sesión
+    window.location.href = "Iniciodesesión.html"; // Redirige al login
+}

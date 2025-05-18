@@ -31,14 +31,25 @@
                             </a>
                         </li>
                         <li>
-                         
+                         <li>
+                            <a href="#sabores" onclick="seleccionar()">
+                                <i class="fa-solid fa-ice-cream"></i>
+                                <span>Sabores</span>
                             </a>
+                        </li>
                         </li>
                         <li>
                             <a href="index.html" onclick="seleccionar()">
                                 <i class="fa-solid fa-utensils"></i>
-                                <span>Platos</span>
+                                <span>Menú</span>
                             </a></li>
+                            <li>
+                            <a href="blog.html" onclick="seleccionar()">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>FoodGram</span>
+                            </a>
+                          </li>
+
                         <li>
                             <a href="#blog" onclick="seleccionar()">
                                 <i class="fa-solid fa-pen"></i>
@@ -56,7 +67,37 @@
                         <i class="fa-solid fa-phone"></i>+1 809 588 0302
                     </a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
+        
+        <!-- Icono del carrito -->
+        <div class="icono-carrito" id="icono-carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador-carrito" id="contador-carrito">0</span>
+        </div>
+        
+        <!-- Carrito de compras -->
+        <div class="carrito-contenedor oculto" id="carrito-contenedor">
+            <div class="carrito-titulo">
+                <h2>Carrito de Compras</h2>
+                <button id="cerrar-carrito">✕</button>
+            </div>
+            
+            <div class="carrito-items" id="carrito-items">
+                <!-- Los items del carrito se agregarán dinámicamente -->
+                <div class="carrito-vacio" id="carrito-vacio">
+                    Tu carrito está vacío
+                </div>
+            </div>
+            
+            <div class="carrito-total">
+                <p>Total: <span id="carrito-total">$0.00</span></p>
+            </div>
+            
+            <div class="carrito-botones">
+                <button class="vaciar-carrito" id="vaciar-carrito">Vaciar carrito</button>
+                <button class="finalizar-compra" id="finalizar-compra">Finalizar compra</button>
+            </div>
+        </div>
+            </div>
                 </div>
                 <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
                     <i class="fa-solid fa-bars"></i>
@@ -67,7 +108,7 @@
 			<div class="content-banner">
 				<p>Ofertas de invierno</p>
 				<h2>Hamburguesa Suprema<br />Oferta 2x1</h2>
-				<a href="#">Comprar ahora</a>
+				<a href="#">Comprar ahora </a>
 			</div>
 		</section>
         <main class="main-content">
@@ -97,7 +138,7 @@
 					<i class="fa-solid fa-headset"></i>
 					<div class="feature-content">
 						<span>Servicio al cliente 24/7</span>
-						<p>LLámenos 24/7 al 123-456-7890</p>
+						<p>LLámenos 24/7 al 809-588-0302</p>
 					</div>
 				</div>
 			</section>
@@ -155,10 +196,10 @@
 								<i class="fa-regular fa-star"></i>
 							</div>
 							<h3>Pizza Italiana</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
+							
 							</span>
 							<p class="price">$4.60 <span>$5.30</span></p>
+                             <button class="agregar-carrito" data-id="1" data-nombre="Pizza Italiana" data-precio="4.60" data-imagen=/img/HD-wallpaper-pizza-food.jpg>Agregar al carrito</button>
 						</div>
 					</div>
                     <div class="card-product">
@@ -189,10 +230,10 @@
 								<i class="fa-regular fa-star"></i>
 							</div>
 							<h3>Hamburguesas</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
+							
 							</span>
 							<p class="price">$5.70 <span>$7.30</span></p>
+                             <button class="agregar-carrito" data-id="2" data-nombre="Hamburger" data-precio="5.70" data-imagen="/img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png">Agregar al carrito</button>
 						</div>
 					</div>
                     <div class="card-product">
@@ -222,10 +263,10 @@
 								<i class="fa-solid fa-star"></i>
 							</div>
 							<h3>Pastel de manzana</h3>
-							<span class="add-cart">
-								<i class="fa-solid fa-basket-shopping"></i>
+							
 							</span>
 							<p class="price">$3.20</p>
+                             <button class="agregar-carrito" data-id="3" data-nombre="Pastel de manzana" data-precio="3.20" data-imagen="/img/manzana.jpg">Agregar al carrito</button>
 						</div>
                 </section>
                 <section class="container specials">
@@ -258,10 +299,10 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h3>Pastas</h3>
-                                <span class="add-cart">
-                                    <i class="fa-solid fa-basket-shopping"></i>
+                           
                                 </span>
                                 <p class="price">$4.60 <span>$8.30</span></p>
+                                 <button class="agregar-carrito" data-id="4" data-nombre="Pastas" data-precio="4.60" data-imagen="/img/pastas.webp">Agregar al carrito</button>
                             </div>
                         </div>
                         <!-- Producto 2 -->
@@ -293,13 +334,13 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h3>Helados</h3>
-                                <span class="add-cart">
-                                    <i class="fa-solid fa-basket-shopping"></i>
+                            
                                 </span>
                                 <p class="price">$2.50 <span>$3.30</span></p>
+                                 <button class="agregar-carrito" data-id="5" data-nombre="Helados" data-precio="2.50" data-imagen="/img/helados.jpg">Agregar al carrito</button>
                             </div>
                         </div>
-                        <!--  -->
+            
                         <div class="card-product">
                             <div class="container-img">
                                 <img src="img/galletas de chocolate.jpg" alt="Cafe Viena" />
@@ -325,43 +366,14 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <h3>Galletas</h3>
-                                <span class="add-cart">
-                                    <i class="fa-solid fa-basket-shopping"></i>
+                            
                                 </span>
                                 <p class="price">$3.85 <span>$5.50</span></p>
+            <button class="agregar-carrito" data-id="6" data-nombre="Galletas" data-precio="3.85" data-imagen="/img/galletas de chocolate.jpg">Agregar al carrito</button>
+            </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="card-product">
-                            <div class="container-img">
-                                <img src="img/carnes cortes.webp" alt="Cafe Liqueurs" />
-                                <div class="button-group">
-                                    <span>
-                                        <i class="fa-regular fa-eye"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa-regular fa-heart"></i>
-                                    </span>
-                                    <span>
-                                        <i class="fa-solid fa-code-compare"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="content-card-product">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <h3>Cortes de Carne</h3>
-                                <span class="add-cart">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </span>
-                                <p class="price">$5.60</p>
-                            </div>
-                        </div>
+            
                     </div>
                 </section>
                 <section class="container blogs">
@@ -370,7 +382,7 @@
                     <div class="container-blogs">
                         <div class="card-blog">
                             <div class="container-img">
-                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 1" />
+                                <img src="img/cocinero blog.jpg" alt="Imagen Blog 1" />
                                 <div class="button-group-blog">
                                     <span>
                                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -381,21 +393,20 @@
                                 </div>
                             </div>
                             <div class="content-blog">
-                                <h3>Lorem, ipsum dolor sit</h3>
-                                <span>22 Noviembre 2024</span>
+                                <h3>El Arte del Batch Cooking: Cocina Una Vez, Come Toda la Semana</h3>
+                                <span>18 Mayo 2025</span>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Iste, molestiae! Ratione et, dolore ipsum
-                                    quaerat iure illum reprehenderit non maxime amet dolor
-                                    voluptas facilis corporis, consequatur eius est sunt
-                                    suscipit?
+                                En nuestras vidas ocupadas, encontrar tiempo para cocinar a diario puede ser un desafío. 
+                                Aquí es donde entra el "batch cooking" o cocina por lotes, 
+                                una técnica que consiste en dedicar unas horas a preparar comidas para toda la semana.
+                                No solo ahorrarás tiempo, sino también dinero y estrés.
                                 </p>
                                 <div class="btn-read-more">Leer más</div>
                             </div>
                         </div>
                         <div class="card-blog">
                             <div class="container-img">
-                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 2" />
+                                <img src="img/fermentacion-de-alimentos.jpg" alt="Imagen Blog 2" />
                                 <div class="button-group-blog">
                                     <span>
                                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -406,21 +417,19 @@
                                 </div>
                             </div>
                             <div class="content-blog">
-                                <h3>Lorem, ipsum dolor sit</h3>
-                                <span>22 Noviembre 2024</span>
+                                <h3>Fermentados Caseros: El Secreto para una Cocina con Más Sabor y Mejor Salud</h3>
+                                <span>18 Mayo 2025</span>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Iste, molestiae! Ratione et, dolore ipsum
-                                    quaerat iure illum reprehenderit non maxime amet dolor
-                                    voluptas facilis corporis, consequatur eius est sunt
-                                    suscipit?
+                                 Los alimentos fermentados han formado parte de nuestra alimentación durante milenios, 
+                                 aunque recientemente han ganado popularidad por sus beneficios para la salud y sus intensos sabores. 
+                                 En este artículo, descubrirás cómo preparar tus propios fermentados en casa de manera sencilla y segura.
                                 </p>
                                 <div class="btn-read-more">Leer más</div>
                             </div>
                         </div>
                         <div class="card-blog">
                             <div class="container-img">
-                                <img src="img/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png" alt="Imagen Blog 3" />
+                                <img src="img/desayuno.jpg" alt="Imagen Blog 3" />
                                 <div class="button-group-blog">
                                     <span>
                                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -431,14 +440,14 @@
                                 </div>
                             </div>
                             <div class="content-blog">
-                                <h3>Lorem, ipsum dolor sit</h3>
-                                <span>22 Noviembre 2024</span>
+                                <h3>Desayunos Nutritivos en 10 Minutos: Empieza el Día con Energía</h3>
+                                <span>18 Mayo 2025</span>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Iste, molestiae! Ratione et, dolore ipsum
-                                    quaerat iure illum reprehenderit non maxime amet dolor
-                                    voluptas facilis corporis, consequatur eius est sunt
-                                    suscipit?
+                                    El desayuno es considerado por muchos nutricionistas como la comida más importante del día,
+                                     pero la falta de tiempo a menudo nos lleva a saltárnoslo o a recurrir a opciones poco saludables. 
+                                     En este artículo te presento cinco desayunos equilibrados que puedes preparar en menos de 10 minutos.
+
+                                    
                                 </p>
                                 <div class="btn-read-more">Leer más</div>
                             </div>
@@ -492,6 +501,7 @@
                 </section>
                 
                 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-                <script src="script.js"></script>
+                <script src="Js/script.js"></script>
+                <script src="Js/Carrito.js"></script>
             </body>
             </html>

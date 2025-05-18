@@ -65,10 +65,22 @@ html{
     padding: 10px 20px;
     border-radius: 30px;
 }
-#inicio header .contenido-header .social > i{
-    display: inline-block;
-    color: #a8a8a8;
-    margin-left: 10px;
+
+.accounticon {
+     display: inline-block;
+    background-color: #ff8f46;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.social .btn-login {
+    margin-right: 10px; /* Ajusta este valor según el espacio que desees */
+    text-decoration: none; /* Asegura que no haya subrayado */
+    color: #fff; /* Color del texto */
+    display: none !important; /* Alineación del ícono y texto */
+    align-items: center; /* Centra verticalmente */
 }
 .nav-responsive{
    display: none;
@@ -125,7 +137,7 @@ html{
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 #inicio .carrusel .info button:hover {
-    background-color: #e5e5e5;
+    background-color: #424141;
     cursor: pointer;
 }
 #inicio .carrusel .info button{
